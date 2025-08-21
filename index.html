@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Convite Digital</title>
   <style>
+    /* Fundo estilo Toy Story */
     body {
       margin: 0;
       padding: 0;
@@ -13,23 +14,57 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background: #f4f4f4;
-      font-family: 'Comic Sans MS', cursive, sans-serif; /* vibe divertida */
+      background: linear-gradient(to bottom, #87ceeb 0%, #b0e0e6 100%);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Usa sua imagem como nuvens no fundo */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("3e9f2043-5c7b-47a5-8912-eb4eaa64eeea.png") repeat;
+      background-size: 250px;
+      opacity: 0.3;
+      z-index: -1;
     }
 
     img {
-      max-width: 100%;
+      max-width: 90%;
       height: auto;
       display: block;
-      border-radius: 8px;
-      margin-bottom: 20px;
+      border-radius: 16px;
+      margin: 20px auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      border: 5px solid #fff;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #ff0000;
+      margin-top: 10px;
+      text-shadow: 2px 2px #ffe600;
+    }
+
+    /* Container dos botões */
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 25px 0;
     }
 
     .btn {
-      background: #ff0000; /* vermelho Toy Story */
+      background: #ff0000;
       color: #fff;
       padding: 14px 28px;
-      margin: 10px;
       border: none;
       border-radius: 12px;
       font-size: 18px;
@@ -37,33 +72,45 @@
       text-decoration: none;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
-      box-shadow: 0 5px 0 #a30000, 0 8px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 0 #a30000, 0 10px 20px rgba(0, 0, 0, 0.3);
+      display: inline-block;
+      min-width: 220px;
     }
 
     .btn:hover {
       background: #ff4d4d;
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 8px 0 #a30000, 0 12px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-4px) scale(1.07);
+      box-shadow: 0 9px 0 #a30000, 0 14px 25px rgba(0, 0, 0, 0.4);
     }
 
     .btn:active {
       transform: translateY(2px);
-      box-shadow: 0 3px 0 #a30000;
+      box-shadow: 0 4px 0 #a30000;
     }
   </style>
 </head>
 <body>
+  <h1>🎉 Você foi convidado! 🎉</h1>
+
   <!-- Imagem do convite -->
-  <img src="Levi.jpg" alt="Convite Digital">
+  <img src="levi_img.png"Convite Digital">
 
-  <!-- Botão WhatsApp -->
-  <a class="btn" href="https://wa.me/5521970833843?text=Confirmo%20minha%20presen%C3%A7a%0A%0ATotal%20de%20crian%C3%A7as:%20_____%0AIdade%20das%20crian%C3%A7as:%20_____%0ATotal%20de%20adultos:%20_____" target="_blank">
-    ✅ Confirmar Presença
-  </a>
+  <!-- Botões -->
+  <div class="buttons">
+    <!-- Botão WhatsApp -->
+    <a class="btn" href="https://wa.me/5521970833843?text=Confirmo%20minha%20presen%C3%A7a%0A%0ATotal%20de%20crian%C3%A7as:%20%0AIdade%20das%20crian%C3%A7as:%20%0ATotal%20de%20adultos:%20" target="_blank">
+      ✅ Confirmar Presença
+    </a>
 
-  <!-- Botão PDF -->
-  <a class="btn" href="SEU_LINK_DO_PDF_AQUI" target="_blank">
-    📄 Ver Detalhes do Evento
-  </a>
+    <!-- Botão PDF -->
+    <a class="btn" href="SEU_LINK_DO_PDF_AQUI" target="_blank">
+      📄 Ver Detalhes do Evento
+    </a>
+
+    <!-- Botão Google Maps -->
+    <a class="btn" href="https://www.google.com/maps/place/Casa+Planet+Kids/@-22.8137389,-43.4189873,17z/data=!3m1!4b1!4m6!3m5!1s0x99614e2b01147b:0x622631d928fd5332!8m2!3d-22.8137389!4d-43.416407!16s%2Fg%2F11b7c5xkp0?entry=ttu" target="_blank">
+      📍 Ver Local no Google Maps
+    </a>
+  </div>
 </body>
 </html>
